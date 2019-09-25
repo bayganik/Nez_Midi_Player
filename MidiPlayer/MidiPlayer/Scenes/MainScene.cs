@@ -482,22 +482,22 @@ namespace MidiPlayer.Scenes
             //znznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznzn
             //
             string filePath = @"C:\temp\cest_lavie.mid";
-            //OpenFileDialog sfd = new OpenFileDialog();
-            //sfd.InitialDirectory = @"C:\";
-            //sfd.Filter = "All files (*.mid)|*.mid";
-            //sfd.Multiselect = false;
-            //DialogResult result = sfd.ShowDialog();
-            //if (result == DialogResult.OK)
-            //{
-            //    filePath = sfd.FileName;
+            OpenFileDialog sfd = new OpenFileDialog();
+            sfd.InitialDirectory = @"C:\";
+            sfd.Filter = "All files (*.mid)|*.mid";
+            sfd.Multiselect = false;
+            DialogResult result = sfd.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                filePath = sfd.FileName;
 
-            //    txt.setText(Path.GetFileNameWithoutExtension(filePath));
-            //}
-            //else
-            //{
-            //    txt.setText("No MIDI Files.");
-            //    return;
-            //}
+                txt.setText(Path.GetFileNameWithoutExtension(filePath));
+            }
+            else
+            {
+                txt.setText("No MIDI Files.");
+                return false;
+            }
             //znznznznznznznznznznznznznznznznznznznznznznznznznznznznzn
             // Get sequencer ready for a file
             //znznznznznznznznznznznznznznznznznznznznznznznznznznznznzn
