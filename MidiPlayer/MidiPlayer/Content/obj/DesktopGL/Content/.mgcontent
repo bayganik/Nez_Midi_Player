@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Arial.spritefont</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Background.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Buttons/Bouton-minus-gris-32.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Buttons/Bouton-minus-palegreen-32.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Buttons/Bouton-minus-vert1-32.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Buttons/Bouton-minus-vert2-32.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Buttons/Bouton-plus-gris-32.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Buttons/Bouton-plus-palegreen-32.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Buttons/Bouton-plus-vert1-32.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Buttons/Bouton-plus-vert2-32.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/fonts/futura.fnt</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/fonts/futura_0.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/fonts/futuraDouble.fnt</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/fonts/futuraDouble_0.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Piano/bkey.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Piano/bkey_med.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Piano/black_key.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Piano/white_key.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Piano/wkey.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Piano/wkey_med.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/btn_black_eject.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/btn_black_next.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/btn_black_pause.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/btn_black_play.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/btn_black_prev.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/btn_black_stop.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/btn_blue_next.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/btn_blue_pause.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/btn_blue_play.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/btn_blue_prev.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/btn_blue_stop.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/btn_green_eject.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/btn_green_next.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/btn_green_pause.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/btn_green_play.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/btn_green_prev.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/btn_green_stop.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/btn_red_next.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/btn_red_pause.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/btn_red_prev.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/btn_red_stop.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/button_black_ffw.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/button_black_pause.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/button_black_play.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/button_black_rew.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/button_black_stop.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/button_green_play.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/eject_blk.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/eject_grn.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/play_blk.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/play_grn.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/stop_blk.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Player/stop_grn.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/BackgroundMetal - Copy.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/BackgroundMetal.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/BlankOnOff.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/KnobMetal.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/KnobMetalSmall.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/KnobSoft.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Mixer1.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/MuteOff.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/MuteOff0.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/MuteOn.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/SelOff.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/SelOff0.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/SelOn.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/SelOn0.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/SliderKnobBlk.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/SliderMetal.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/SliderMetalOriginal.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/SliderMetalSmall.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/SliderMetalSmall0.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/SliderSimple.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/SliderSoft.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/SliderSoftSmall.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/SlideTicks.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/SlideTicks_big.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/SlideTicks_Med.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/SoloOff.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/SoloOff0.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/SoloOn.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk00Off.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk00On.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk01Off.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk01On.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk02Off.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk02On.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk03Off.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk03On.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk04Off.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk04On.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk05Off.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk05On.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk06Off.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk06On.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk07Off.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk07On.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk08Off.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk08On.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk09Off.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk09On.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk10Off.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk10On.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk11Off.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk11On.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk12Off.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk12On.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk13Off.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk13On.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk14Off.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk14On.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk15Off.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/Trk15On.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/TrkOff.png</File>
+    <File>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/Slider/TrkOn.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

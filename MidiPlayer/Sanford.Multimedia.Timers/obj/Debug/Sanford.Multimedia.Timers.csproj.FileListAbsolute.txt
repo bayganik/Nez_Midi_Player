@@ -1,0 +1,12 @@
+C:\DevApps\MIDI\Karaboss-master\Sanford.Multimedia.Timers\bin\Debug\Sanford.Multimedia.Timers.dll
+C:\DevApps\MIDI\Karaboss-master\Sanford.Multimedia.Timers\bin\Debug\Sanford.Multimedia.Timers.pdb
+C:\DevApps\MIDI\Karaboss-master\Sanford.Multimedia.Timers\obj\Debug\Sanford.Multimedia.Timers.csprojAssemblyReference.cache
+C:\DevApps\MIDI\Karaboss-master\Sanford.Multimedia.Timers\obj\Debug\Sanford.Multimedia.Timers.csproj.CoreCompileInputs.cache
+C:\DevApps\MIDI\Karaboss-master\Sanford.Multimedia.Timers\obj\Debug\Sanford.Multimedia.Timers.dll
+C:\DevApps\MIDI\Karaboss-master\Sanford.Multimedia.Timers\obj\Debug\Sanford.Multimedia.Timers.pdb
+C:\DevApps\Nez\Nez-Samples\_MidiPlayer\Nez_Midi_Player\MidiPlayer\Sanford.Multimedia.Timers\bin\Debug\Sanford.Multimedia.Timers.dll
+C:\DevApps\Nez\Nez-Samples\_MidiPlayer\Nez_Midi_Player\MidiPlayer\Sanford.Multimedia.Timers\bin\Debug\Sanford.Multimedia.Timers.pdb
+C:\DevApps\Nez\Nez-Samples\_MidiPlayer\Nez_Midi_Player\MidiPlayer\Sanford.Multimedia.Timers\obj\Debug\Sanford.Multimedia.Timers.csprojAssemblyReference.cache
+C:\DevApps\Nez\Nez-Samples\_MidiPlayer\Nez_Midi_Player\MidiPlayer\Sanford.Multimedia.Timers\obj\Debug\Sanford.Multimedia.Timers.csproj.CoreCompileInputs.cache
+C:\DevApps\Nez\Nez-Samples\_MidiPlayer\Nez_Midi_Player\MidiPlayer\Sanford.Multimedia.Timers\obj\Debug\Sanford.Multimedia.Timers.dll
+C:\DevApps\Nez\Nez-Samples\_MidiPlayer\Nez_Midi_Player\MidiPlayer\Sanford.Multimedia.Timers\obj\Debug\Sanford.Multimedia.Timers.pdb

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/fonts/futura.fnt</SourceFile>
+  <SourceTime>2019-06-28T11:07:30.6957559-04:00</SourceTime>
+  <DestFile>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/bin/DesktopGL/Content/fonts/futura.xnb</DestFile>
+  <DestTime>2019-07-19T12:16:08.165076-04:00</DestTime>
+  <Importer>BitmapFontImporter</Importer>
+  <ImporterTime>2019-07-19T11:49:22.2675525-04:00</ImporterTime>
+  <Processor>BitmapFontProcessor</Processor>
+  <ProcessorTime>2019-07-19T11:49:22.2675525-04:00</ProcessorTime>
+  <Parameters>
+    <Key>packTexturesIntoXnb</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>compressTextures</Key>
+    <Value>False</Value>
+  </Parameters>
+  <Dependencies>
+    <string>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/fonts/futura_0.png</string>
+  </Dependencies>
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/fonts/futuraDouble.fnt</SourceFile>
+  <SourceTime>2019-06-28T11:07:30.6997453-04:00</SourceTime>
+  <DestFile>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/bin/Windows/fonts/futuraDouble.xnb</DestFile>
+  <DestTime>2019-07-01T11:39:02.15085-04:00</DestTime>
+  <Importer>BitmapFontImporter</Importer>
+  <ImporterTime>2019-05-10T10:20:36.0985308-04:00</ImporterTime>
+  <Processor>BitmapFontProcessor</Processor>
+  <ProcessorTime>2019-05-10T10:20:36.0985308-04:00</ProcessorTime>
+  <Parameters>
+    <Key>packTexturesIntoXnb</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>compressTextures</Key>
+    <Value>False</Value>
+  </Parameters>
+  <Dependencies>
+    <string>C:/DevApps/Nez/Nez-Samples/_MidiPlayer/Nez_Midi_Player/MidiPlayer/MidiPlayer/Content/fonts/futuraDouble_0.png</string>
+  </Dependencies>
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

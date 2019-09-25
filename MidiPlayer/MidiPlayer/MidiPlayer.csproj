@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C63DC370-E456-4459-9B4D-961F29F6203C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MidiPlayer</RootNamespace>
+    <AssemblyName>MidiPlayer</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>DesktopGL</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;LINUX</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;LINUX</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>mid.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ECS\Components\PlayingComponent.cs" />
+    <Compile Include="ECS\Components\NoteComponent.cs" />
+    <Compile Include="ECS\Components\KeyComponent.cs" />
+    <Compile Include="ECS\Components\MouseComponent.cs" />
+    <Compile Include="ECS\Entities\PianoEntitySmallKey.cs" />
+    <Compile Include="ECS\Entities\PianoEntity.cs" />
+    <Compile Include="ECS\Entities\TrackMixerEntity.cs" />
+    <Compile Include="ECS\Systems\PianoClickSystem.cs" />
+    <Compile Include="ECS\Systems\KeyClickSystem.cs" />
+    <Compile Include="ECS\Systems\MouseClickSystem.cs" />
+    <Compile Include="Game1.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scenes\BaseScene.cs" />
+    <Compile Include="Scenes\BaseUI.cs" />
+    <Compile Include="Scenes\DialogBar.cs" />
+    <Compile Include="Scenes\MainScene.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Nez">
+      <HintPath>..\..\..\..\..\Nez\Nez.Portable\bin\Debug\Nez.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icon.ico" />
+    <EmbeddedResource Include="Icon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x86\SDL2.dll">
+      <Link>x86\SDL2.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x64\SDL2.dll">
+      <Link>x64\SDL2.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x86\soft_oal.dll">
+      <Link>x86\soft_oal.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x64\soft_oal.dll">
+      <Link>x64\soft_oal.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x86\libSDL2-2.0.so.0">
+      <Link>x86\libSDL2-2.0.so.0</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x64\libSDL2-2.0.so.0">
+      <Link>x64\libSDL2-2.0.so.0</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x86\libopenal.so.1">
+      <Link>x86\libopenal.so.1</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x64\libopenal.so.1">
+      <Link>x64\libopenal.so.1</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\libSDL2-2.0.0.dylib">
+      <Link>libSDL2-2.0.0.dylib</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\libopenal.1.dylib">
+      <Link>libopenal.1.dylib</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\MonoGame.Framework.dll.config">
+      <Link>MonoGame.Framework.dll.config</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="Content\Arial.spritefont" />
+    <None Include="Content\fonts\futura.fnt" />
+    <None Include="Content\fonts\futura.otf" />
+    <None Include="Content\fonts\futuraDouble.fnt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sanford.Collections\Sanford.Collections.csproj">
+      <Project>{2cb17756-93fd-40d6-b675-4ddf3ad56a6b}</Project>
+      <Name>Sanford.Collections</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sanford.Multimedia.Midi\Sanford.Multimedia.Midi.csproj">
+      <Project>{4269c72a-8d3a-4737-8f89-72eaa33ea9e1}</Project>
+      <Name>Sanford.Multimedia.Midi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sanford.Multimedia.Timers\Sanford.Multimedia.Timers.csproj">
+      <Project>{14d9362a-7f0b-4e3c-b219-12fea0a0b61f}</Project>
+      <Name>Sanford.Multimedia.Timers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sanford.Multimedia\Sanford.Multimedia.csproj">
+      <Project>{b51d2d36-c9fa-46ca-a0fe-0504a488c8a9}</Project>
+      <Name>Sanford.Multimedia</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sanford.Threading\Sanford.Threading.csproj">
+      <Project>{fb3cd051-cede-44c5-a35f-fc0be6c9bc1e}</Project>
+      <Name>Sanford.Threading</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Buttons\Bouton-minus-gris-32.png" />
+    <Content Include="Content\Buttons\Bouton-minus-palegreen-32.png" />
+    <Content Include="Content\Buttons\Bouton-minus-vert1-32.png" />
+    <Content Include="Content\Buttons\Bouton-minus-vert2-32.png" />
+    <Content Include="Content\Buttons\Bouton-plus-gris-32.png" />
+    <Content Include="Content\Buttons\Bouton-plus-palegreen-32.png" />
+    <Content Include="Content\Buttons\Bouton-plus-vert1-32.png" />
+    <Content Include="Content\Buttons\Bouton-plus-vert2-32.png" />
+    <Content Include="Content\en.player.png" />
+    <Content Include="Content\fonts\futuraDouble_0.png" />
+    <Content Include="Content\fonts\futura_0.png" />
+    <Content Include="Content\Notes\bass.png" />
+    <Content Include="Content\Notes\bass30.png" />
+    <Content Include="Content\Notes\becarre.png" />
+    <Content Include="Content\Notes\bemol.png" />
+    <Content Include="Content\Notes\diese.png" />
+    <Content Include="Content\Notes\eight.png" />
+    <Content Include="Content\Notes\four.png" />
+    <Content Include="Content\Notes\nine.png" />
+    <Content Include="Content\Notes\note1.png" />
+    <Content Include="Content\Notes\note16.png" />
+    <Content Include="Content\Notes\note2.png" />
+    <Content Include="Content\Notes\note32.png" />
+    <Content Include="Content\Notes\note4.png" />
+    <Content Include="Content\Notes\note64.png" />
+    <Content Include="Content\Notes\note8.png" />
+    <Content Include="Content\Notes\NotePair.png" />
+    <Content Include="Content\Notes\six.png" />
+    <Content Include="Content\Notes\three.png" />
+    <Content Include="Content\Notes\treble.png" />
+    <Content Include="Content\Notes\treble30.png" />
+    <Content Include="Content\Notes\triolet30.png" />
+    <Content Include="Content\Notes\twelve.png" />
+    <Content Include="Content\Notes\two.png" />
+    <Content Include="Content\Piano\bkey.png" />
+    <Content Include="Content\Piano\black_key - Copy.png" />
+    <Content Include="Content\Piano\black_key.png" />
+    <Content Include="Content\Piano\white_key.png" />
+    <Content Include="Content\Piano\wkey.png" />
+    <Content Include="Content\Player\btn_black_next.png" />
+    <Content Include="Content\Player\btn_black_pause.png" />
+    <Content Include="Content\Player\btn_black_play.png" />
+    <Content Include="Content\Player\btn_black_prev.png" />
+    <Content Include="Content\Player\btn_black_stop.png" />
+    <Content Include="Content\Player\btn_blue_next.png" />
+    <Content Include="Content\Player\btn_blue_pause.png" />
+    <Content Include="Content\Player\btn_blue_play.png" />
+    <Content Include="Content\Player\btn_blue_prev.png" />
+    <Content Include="Content\Player\btn_blue_stop.png" />
+    <Content Include="Content\Player\btn_green_next.png" />
+    <Content Include="Content\Player\btn_green_pause.png" />
+    <Content Include="Content\Player\btn_green_prev.png" />
+    <Content Include="Content\Player\btn_red_next.png" />
+    <Content Include="Content\Player\btn_red_pause.png" />
+    <Content Include="Content\Player\btn_red_prev.png" />
+    <Content Include="Content\Player\btn_red_stop.png" />
+    <Content Include="Content\Player\button_black_ffw.png" />
+    <Content Include="Content\Player\button_black_pause.png" />
+    <Content Include="Content\Player\button_black_play.png" />
+    <Content Include="Content\Player\button_black_rew.png" />
+    <Content Include="Content\Player\button_black_stop.png" />
+    <Content Include="Content\Player\button_green_play.png" />
+    <Content Include="Content\pointer.png" />
+    <Content Include="mid.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

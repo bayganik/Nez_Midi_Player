@@ -1,0 +1,12 @@
+C:\DevApps\MIDI\Karaboss-master\Sanford.Multimedia\bin\Debug\Sanford.Multimedia.dll
+C:\DevApps\MIDI\Karaboss-master\Sanford.Multimedia\bin\Debug\Sanford.Multimedia.pdb
+C:\DevApps\MIDI\Karaboss-master\Sanford.Multimedia\obj\Debug\Sanford.Multimedia.csprojAssemblyReference.cache
+C:\DevApps\MIDI\Karaboss-master\Sanford.Multimedia\obj\Debug\Sanford.Multimedia.csproj.CoreCompileInputs.cache
+C:\DevApps\MIDI\Karaboss-master\Sanford.Multimedia\obj\Debug\Sanford.Multimedia.dll
+C:\DevApps\MIDI\Karaboss-master\Sanford.Multimedia\obj\Debug\Sanford.Multimedia.pdb
+C:\DevApps\Nez\Nez-Samples\_MidiPlayer\Nez_Midi_Player\MidiPlayer\Sanford.Multimedia\bin\Debug\Sanford.Multimedia.dll
+C:\DevApps\Nez\Nez-Samples\_MidiPlayer\Nez_Midi_Player\MidiPlayer\Sanford.Multimedia\bin\Debug\Sanford.Multimedia.pdb
+C:\DevApps\Nez\Nez-Samples\_MidiPlayer\Nez_Midi_Player\MidiPlayer\Sanford.Multimedia\obj\Debug\Sanford.Multimedia.csprojAssemblyReference.cache
+C:\DevApps\Nez\Nez-Samples\_MidiPlayer\Nez_Midi_Player\MidiPlayer\Sanford.Multimedia\obj\Debug\Sanford.Multimedia.csproj.CoreCompileInputs.cache
+C:\DevApps\Nez\Nez-Samples\_MidiPlayer\Nez_Midi_Player\MidiPlayer\Sanford.Multimedia\obj\Debug\Sanford.Multimedia.dll
+C:\DevApps\Nez\Nez-Samples\_MidiPlayer\Nez_Midi_Player\MidiPlayer\Sanford.Multimedia\obj\Debug\Sanford.Multimedia.pdb
