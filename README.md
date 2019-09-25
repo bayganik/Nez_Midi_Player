@@ -10,3 +10,5 @@ However, You will find most examples of NEZ to be using updates inside "Componen
 I used Sanford library for MIDI files.  Its a wonderful library for reading/writing and playing MIDI files.
 
 ## Sample Screen
+
+ECS explained here https://www.gamedev.net/articles/programming/general-and-gameplay-programming/understanding-component-entity-systems-r3013/
