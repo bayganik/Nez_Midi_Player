@@ -11,6 +11,6 @@ I used Sanford library for MIDI files.  Its a wonderful library for reading/writ
 
 ## Sample Screen
 
-![game image](CardGame.png)
+![game image](MIDI_player.png)
 
 ECS explained here https://www.gamedev.net/articles/programming/general-and-gameplay-programming/understanding-component-entity-systems-r3013/
