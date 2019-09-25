@@ -216,6 +216,7 @@
     <Content Include="Content\Player\button_green_play.png" />
     <Content Include="Content\pointer.png" />
     <Content Include="mid.ico" />
+    <Content Include="MIDI_player.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
