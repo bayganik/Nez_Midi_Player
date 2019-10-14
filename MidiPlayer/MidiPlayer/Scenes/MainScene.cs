@@ -215,8 +215,11 @@ namespace MidiPlayer.Scenes
             //znznznznznznznznznznznznznznznznznznznznznznznznznznznznzn
             Background = CreateEntity("background", new Vector2(0, 0));
             Background.Tag = 90;
-            Background.AddComponent(new SpriteRenderer(Content.Load<Texture2D>("Background")).SetRenderLayer(99));
-            Background.SetPosition(new Vector2(100, 30));
+            //SpriteRenderer comp = new SpriteRenderer(Content.Load<Texture2D>("Background")).SetRenderLayer(99);
+            
+            Background.AddComponent(new SpriteRenderer(Content.Load<Texture2D>("Slider/BackgroundMetal")).SetRenderLayer(99));
+            Background.GetComponent<SpriteRenderer>().SetOrigin(new Vector2(0, 0));
+            Background.SetPosition(new Vector2(310, 15));
             //znznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznzn
             // Canvas 
             //znznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznzn
