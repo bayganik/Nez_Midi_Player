@@ -16,9 +16,9 @@ namespace MidiPlayer.ECS.Components
         {
 
         }
-        public override void onAddedToEntity()
+        public override void OnAddedToEntity()
         {
-            base.onAddedToEntity();
+            base.OnAddedToEntity();
 
 
         }

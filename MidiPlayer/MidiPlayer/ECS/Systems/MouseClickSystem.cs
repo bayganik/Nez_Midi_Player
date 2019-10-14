@@ -29,31 +29,31 @@ namespace MidiPlayer.ECS.Systems
         {
 
         }
-        public override void process(Entity entity)
+        public override void Process(Entity entity)
         {
             //
             // ONLY MOUSE entity comes here
             //
-            MainGameScene = entity.scene as MainScene;              //hand entity belongs to MainScene
+            MainGameScene = entity.Scene as MainScene;              //hand entity belongs to MainScene
             CurrentMouse = Mouse.GetState();
             MousePos = new Vector2(CurrentMouse.Position.X, CurrentMouse.Position.Y);
-            entity.transform.position = scene.camera.screenToWorldPoint(new Vector2(CurrentMouse.Position.X, CurrentMouse.Position.Y));
+            entity.Transform.Position = Scene.Camera.ScreenToWorldPoint(new Vector2(CurrentMouse.Position.X, CurrentMouse.Position.Y));
 
-            MouseCollider = entity.getComponent<BoxCollider>();     //did we click on a BoxCollider
-            if (Input.leftMouseButtonPressed)
+            MouseCollider = entity.GetComponent<BoxCollider>();     //did we click on a BoxCollider
+            if (Input.LeftMouseButtonPressed)
             {
-                if (MouseCollider.collidesWithAny(out CollisionResult collisionResult))
+                if (MouseCollider.CollidesWithAny(out CollisionResult collisionResult))
                 {
                     //KeyPressed = collisionResult.collider.entity;
-                    //Sprite sp = KeyPressed.getComponent<Sprite>();
-                    //sp.color = Color.Blue;
+                    //Sprite sp = KeyPressed.GetComponent<SpriteRenderer>();
+                    //sp.Color = Color.Blue;
                 }
             }
-            if (Input.leftMouseButtonReleased)
+            if (Input.LeftMouseButtonReleased)
             {
                 
-                //Sprite sp = KeyPressed.getComponent<Sprite>();
-                //sp.color = Color.White;
+                //Sprite sp = KeyPressed.GetComponent<SpriteRenderer>();
+                //sp.Color = Color.White;
             }
 
         }

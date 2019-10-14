@@ -138,16 +138,16 @@ namespace MidiPlayer.Scenes
         // Player buttons
         //
         Nez.UI.ImageButton PlayBtn;
-        SubtextureDrawable PlayImageUp;
-        SubtextureDrawable PlayImageDn;
+        SpriteDrawable PlayImageUp;
+        SpriteDrawable PlayImageDn;
 
         Nez.UI.ImageButton StopBtn;
-        SubtextureDrawable StopImageUp;
-        SubtextureDrawable StopImageDn;
+        SpriteDrawable StopImageUp;
+        SpriteDrawable StopImageDn;
 
         Nez.UI.ImageButton LoadBtn;
-        SubtextureDrawable LoadImageUp;
-        SubtextureDrawable LoadImageDn;
+        SpriteDrawable LoadImageUp;
+        SpriteDrawable LoadImageDn;
         //
         // Mouse var, so we can track what it clicks on
         //
@@ -156,7 +156,7 @@ namespace MidiPlayer.Scenes
 
         int PrevNote;
 
-        Nez.Text txt;
+        Nez.TextComponent txt;
         //znznznznznznznznznznznzn
         //      MainScene 
         //znznznznznznznznznznznzn
@@ -164,10 +164,10 @@ namespace MidiPlayer.Scenes
         {
             policy = Scene.SceneResolutionPolicy.ExactFit;
         }
-        public override void initialize()
+        public override void Initialize()
         {
-            base.initialize();
-            font = new NezSpriteFont(content.Load<SpriteFont>("Arial"));
+            base.Initialize();
+            font = new NezSpriteFont(Content.Load<SpriteFont>("Arial"));
             //
             // MIDI sequencer must have processes
             //
@@ -188,85 +188,68 @@ namespace MidiPlayer.Scenes
             //znznznznznznznznznznznznznznznznznznznznznznznznznznznznzn
             // mouse entity (used for tracking of clicks)
             //znznznznznznznznznznznznznznznznznznznznznznznznznznznznzn
-            MouseCursor = createEntity("mouse");
-            MouseCursor.addComponent(new BoxCollider());
-            MouseCursor.addComponent(new MouseComponent());
+            MouseCursor = CreateEntity("mouse");
+            MouseCursor.AddComponent(new BoxCollider());
+            MouseCursor.AddComponent(new MouseComponent());
 
             //znznznznznznznznznznznznznznznznznznznznznznznznznznznznzn
             // keyboard entity (playing piano manually)
             //znznznznznznznznznznznznznznznznznznznznznznznznznznznznzn
-            MouseCursor = createEntity("keyboard");
-            MouseCursor.addComponent(new KeyComponent());
+            MouseCursor = CreateEntity("keyboard");
+            MouseCursor.AddComponent(new KeyComponent());
 
             //znznznznznznznznznznznznznznznznznznznznznznznznznznznznzn
             // Text entity with component (Game name label)
             //znznznznznznznznznznznznznznznznznznznznznznznznznznznznzn
-            TextEntity = createEntity("txt");
-            TextEntity.transform.position = new Vector2(10, 20);
-            TextEntity.transform.scale = new Vector2(1, 1);
-            txt = new Text(Graphics.instance.bitmapFont, "MIDI Player", new Vector2(0, 0), Color.White);
-            txt.setFont(font);
-            TextEntity.addComponent(txt);
+            TextEntity = CreateEntity("txt");
+            TextEntity.Transform.Position = new Vector2(10, 20);
+            TextEntity.Transform.Scale = new Vector2(1, 1);
+            txt = new TextComponent(Graphics.Instance.BitmapFont, "MIDI Player", new Vector2(0, 0), Color.White);
+            txt.SetFont(font);
+            TextEntity.AddComponent(txt);
 
             //znznznznznznznznznznznznznznznznznznznznznznznznznznznznzn
             // Background, with high value render layer 
             //znznznznznznznznznznznznznznznznznznznznznznznznznznznznzn
-            //Background = createEntity("background", new Vector2(0,0));
-            //Background.tag = 90;
-            //Background.addComponent(new Sprite(content.Load<Texture2D>("Background")).setOrigin(new Vector2(0,0)).setRenderLayer(99));
-
+            Background = CreateEntity("background", new Vector2(0, 0));
+            Background.Tag = 90;
+            Background.AddComponent(new SpriteRenderer(Content.Load<Texture2D>("Background")).SetRenderLayer(99));
+            Background.SetPosition(new Vector2(100, 30));
             //znznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznzn
             // Canvas 
             //znznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznzn
             //
             int StartX = 10;
-            Entity uiCan = createEntity("ui");
-            canvas = uiCan.addComponent(new UICanvas());
-            canvas.isFullScreen = true;
-            canvas.renderLayer = -1;//= SCREEN_SPACE_RENDER_LAYER;
-            //
-            // Step thru each note
-            //
-            //StepBtn = canvas.stage.addElement(new TextButton("Step!", Skin.createDefaultSkin()));
-            //StepBtn.setPosition(StartX + 560, StartPos);
-            //StepBtn.setSize(60f, 20f);
-            //StepBtn.onClicked += StepBtn_onClicked;
-            //
-            // Display Piano 
-            //
-            //var pi00 = new PianoEntity(this, new Vector2(StartX + 200, StartPos), 0);
-            //var pi00 = new PianoEntity(this, new Vector2(20, 250 + (80 * 7)), 5);
-            //
-            // Channel Massage Label
-            //
-            //CInst00 = canvas.stage.addElement(new Nez.UI.Label("All Instruments"));
-            //CInst00.setPosition(PianoPos.X, PianoPos.Y - 90);
-            //CInst00.setSize(100f, 50f);
+            Entity uiCan = CreateEntity("ui");
+            canvas = uiCan.AddComponent(new UICanvas());
+
+            canvas.IsFullScreen = true;
+            canvas.RenderLayer = -10;//= SCREEN_SPACE_RENDER_LAYER;
             //
             // Display for track number
             //
-            TrackMsg = canvas.stage.addElement(new Nez.UI.Label("All Tracks"));
-            TrackMsg.setPosition(320, 310);
-            TrackMsg.setSize(100f, 50f);
+            TrackMsg = canvas.Stage.AddElement(new Nez.UI.Label("All Tracks"));
+            TrackMsg.SetPosition(320, 310);
+            TrackMsg.SetSize(100f, 50f);
             //
             // Display for channel number
             //
-            ChnlMsg = canvas.stage.addElement(new Nez.UI.Label("All Channels"));
-            ChnlMsg.setPosition(320, 330);
-            ChnlMsg.setSize(100f, 50f);
+            ChnlMsg = canvas.Stage.AddElement(new Nez.UI.Label("All Channels"));
+            ChnlMsg.SetPosition(320, 330);
+            ChnlMsg.SetSize(100f, 50f);
             AllChannels = -1;
             //
             // Display for instrument name
             //
-            InstrumentMsg = canvas.stage.addElement(new Nez.UI.Label("All Channels"));
-            InstrumentMsg.setPosition(320, 350);
-            InstrumentMsg.setSize(100f, 50f);
+            InstrumentMsg = canvas.Stage.AddElement(new Nez.UI.Label("All Channels"));
+            InstrumentMsg.SetPosition(320, 350);
+            InstrumentMsg.SetSize(100f, 50f);
             //
             // Dispaly for note number being played
             //
-            NoteMsg = canvas.stage.addElement(new Nez.UI.Label("Piano note played"));
-            NoteMsg.setPosition(320, 370);
-            NoteMsg.setSize(100f, 50f);
+            NoteMsg = canvas.Stage.AddElement(new Nez.UI.Label("Piano note played"));
+            NoteMsg.SetPosition(320, 370);
+            NoteMsg.SetSize(100f, 50f);
 
             //
             // Track buttons and channels
@@ -287,42 +270,42 @@ namespace MidiPlayer.Scenes
             //
             // Progress bar 
             //
-            PgBar = canvas.stage.addElement(new Nez.UI.ProgressBar(0, 1000, 1, false, Nez.UI.ProgressBarStyle.create(Color.Green, Color.White)));
-            PgBar.setPosition(10, StartPos);
+            PgBar = canvas.Stage.AddElement(new Nez.UI.ProgressBar(0, 1000, 1, false, Nez.UI.ProgressBarStyle.Create(Color.Green, Color.White)));
+            PgBar.SetPosition(10, StartPos);
             //
             // Play button
             //
-            PlayImageUp = new SubtextureDrawable((content.Load<Texture2D>("Player/play_blk")));
-            PlayImageDn = new SubtextureDrawable((content.Load<Texture2D>("Player/play_grn")));
-            PlayBtn = canvas.stage.addElement(new ImageButton(PlayImageUp, PlayImageDn));
-            PlayBtn.setPosition(StartX, StartPos + 30);
-            PlayBtn.onClicked += Play;
+            PlayImageUp = new SpriteDrawable((Content.Load<Texture2D>("Player/play_blk")));
+            PlayImageDn = new SpriteDrawable((Content.Load<Texture2D>("Player/play_grn")));
+            PlayBtn = canvas.Stage.AddElement(new ImageButton(PlayImageUp, PlayImageDn));
+            PlayBtn.SetPosition(StartX, StartPos + 30);
+            PlayBtn.OnClicked += Play;
 
-            //
+            // 
             // Stop button
             //
-            StopImageUp = new SubtextureDrawable((content.Load<Texture2D>("Player/stop_blk")));
-            StopImageDn = new SubtextureDrawable((content.Load<Texture2D>("Player/stop_grn")));
-            StopBtn = canvas.stage.addElement(new ImageButton(StopImageUp, StopImageDn));
-            StopBtn.setPosition(StartX + 71, StartPos + 30);
-            StopBtn.onClicked += Stop;
+            StopImageUp = new SpriteDrawable((Content.Load<Texture2D>("Player/stop_blk")));
+            StopImageDn = new SpriteDrawable((Content.Load<Texture2D>("Player/stop_grn")));
+            StopBtn = canvas.Stage.AddElement(new ImageButton(StopImageUp, StopImageDn));
+            StopBtn.SetPosition(StartX + 71, StartPos + 30);
+            StopBtn.OnClicked += Stop;
 
             //
             // Load/Eject button (stop playing, look for another MIDI file)
             //
-            LoadImageUp = new SubtextureDrawable((content.Load<Texture2D>("Player/eject_blk")));
-            LoadImageDn = new SubtextureDrawable((content.Load<Texture2D>("Player/eject_grn")));
-            LoadBtn = canvas.stage.addElement(new ImageButton(LoadImageUp, LoadImageDn));
-            LoadBtn.setPosition(StartX + 110, StartPos + 30);
-            LoadBtn.onClicked += Load;
+            LoadImageUp = new SpriteDrawable((Content.Load<Texture2D>("Player/eject_blk")));
+            LoadImageDn = new SpriteDrawable((Content.Load<Texture2D>("Player/eject_grn")));
+            LoadBtn = canvas.Stage.AddElement(new ImageButton(LoadImageUp, LoadImageDn));
+            LoadBtn.SetPosition(StartX + 110, StartPos + 30);
+            LoadBtn.OnClicked += Load;
             //
             //znznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznzn
             // Systems to process our requests
             //znznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznznzn
             //
-            this.addEntityProcessor(new MouseClickSystem(new Matcher().all(typeof(MouseComponent))));
-            this.addEntityProcessor(new KeyClickSystem(new Matcher().all(typeof(KeyComponent))));
-            this.addEntityProcessor(new PianoClickSystem(new Matcher().all(typeof(NoteComponent), typeof(PlayingComponent))));
+            this.AddEntityProcessor(new MouseClickSystem(new Matcher().All(typeof(MouseComponent))));
+            this.AddEntityProcessor(new KeyClickSystem(new Matcher().All(typeof(KeyComponent))));
+            this.AddEntityProcessor(new PianoClickSystem(new Matcher().All(typeof(NoteComponent), typeof(PlayingComponent))));
             //
             // Start by loading a file
             //
@@ -348,26 +331,26 @@ namespace MidiPlayer.Scenes
             // Track selection check mark (on top of slider)
             // Mute also comes here for each track
             //
-            if (TrackChanl[btn.tag] < 0)
+            if (TrackChanl[btn.Tag] < 0)
             {
                 return;
             }
 
 
-            TracksPlaying[btn.tag] = !TracksPlaying[btn.tag];
-            ChannelsPlaying[TrackChanl[btn.tag]] = !ChannelsPlaying[TrackChanl[btn.tag]];
+            TracksPlaying[btn.Tag] = !TracksPlaying[btn.Tag];
+            ChannelsPlaying[TrackChanl[btn.Tag]] = !ChannelsPlaying[TrackChanl[btn.Tag]];
 
             AllChannels = 0;
             sequencer1.Stop();
             sequencer1.Continue();
         }
-        public void SoloBtn_onClicked(Nez.UI.Button btn)
+        public void SoloBtn_OnClicked(Nez.UI.Button btn)
         {
-            SoloPushedOn = btn.isChecked;           //toggle on/off
+            SoloPushedOn = btn.IsChecked;           //toggle on/off
             //
             // Solo comes here for each track
             //
-            if (TrackChanl[btn.tag] < 0)
+            if (TrackChanl[btn.Tag] < 0)
             {
                 return;
             }
@@ -389,13 +372,13 @@ namespace MidiPlayer.Scenes
                             ChannelsPlaying[TrackChanl[i]] = false;
                         }
                         Nez.UI.CheckBox tmpCB = SoloBtnGroup[i];
-                        tmpCB.isChecked = false;
+                        tmpCB.IsChecked = false;
                     }
                 }
                 //
                 // turn on this track (btn)
                 //
-                btn.isChecked = true;
+                btn.IsChecked = true;
             }
             else
             {
@@ -419,33 +402,33 @@ namespace MidiPlayer.Scenes
                 //
                 // turn off this track (btn)
                 //
-                btn.isChecked = false;
+                btn.IsChecked = false;
             }
-            TracksPlaying[btn.tag] = true;
-            ChannelsPlaying[TrackChanl[btn.tag]] = true;
+            TracksPlaying[btn.Tag] = true;
+            ChannelsPlaying[TrackChanl[btn.Tag]] = true;
             //
             // give info about the track
             //
-            TrackBtn_onClicked(btn);
+            TrackBtn_OnClicked(btn);
 
             AllChannels = 0;
             sequencer1.Stop();
             sequencer1.Continue();
         }
-        public void TrackBtn_onClicked(Nez.UI.Button btn)
+        public void TrackBtn_OnClicked(Nez.UI.Button btn)
         {
             //
             // Track number button (on bottom of slider)
             //
-            if (TrackChanl[btn.tag] < 0)
-                ChnlMsg.setText("Channel:  ");
+            if (TrackChanl[btn.Tag] < 0)
+                ChnlMsg.SetText("Channel:  ");
             else
-                ChnlMsg.setText("Channel: " + TrackChanl[btn.tag].ToString("00"));
+                ChnlMsg.SetText("Channel: " + TrackChanl[btn.Tag].ToString("00"));
             //
             // Give channel number/instrument name
             //
-            TrackMsg.setText("Track: " + btn.tag.ToString("00")); 
-            InstrumentMsg.setText("Description: " + TrackInstrument[btn.tag]);
+            TrackMsg.SetText("Track: " + btn.Tag.ToString("00")); 
+            InstrumentMsg.SetText("Description: " + TrackInstrument[btn.Tag]);
         }
         public void Vol_Changed(float slider)
         {
@@ -460,13 +443,13 @@ namespace MidiPlayer.Scenes
         }
 
 
-        private void PBtn_onClicked(Nez.UI.Button btn)
+        private void PBtn_OnClicked(Nez.UI.Button btn)
         {
             AllChannels = -1;
-            ChnlMsg.setText("All Channels");
+            ChnlMsg.SetText("All Channels");
             
         }
-        private void StepBtn_onClicked(Nez.UI.Button btn)
+        private void StepBtn_OnClicked(Nez.UI.Button btn)
         {
             sequencer1.Continue();
 
@@ -491,11 +474,11 @@ namespace MidiPlayer.Scenes
             {
                 filePath = sfd.FileName;
 
-                txt.setText(Path.GetFileNameWithoutExtension(filePath));
+                txt.SetText(Path.GetFileNameWithoutExtension(filePath));
             }
             else
             {
-                txt.setText("No MIDI Files.");
+                txt.SetText("No MIDI Files.");
                 return false;
             }
             //znznznznznznznznznznznznznznznznznznznznznznznznznznznznzn
@@ -509,7 +492,7 @@ namespace MidiPlayer.Scenes
             SetTrackButtonOn();                                 //disp active channels
 
             sequencer1.Sequence = sequence1;
-            PgBar.setMinMax(0, sequence1.GetLength());          //progress bar min/max
+            PgBar.SetMinMax(0, sequence1.GetLength());          //progress bar min/max
 
             //sequencer1.Start();
             return true;
@@ -565,8 +548,8 @@ namespace MidiPlayer.Scenes
             int x = 0;          //index of the control
 
             Vector2 StartPos = new Vector2(20, 250 + (80 * x));
-            ChnlMsg.setText("All Tracks");
-            //InstrumentMsg.setText("All Instruments");
+            ChnlMsg.SetText("All Tracks");
+            //InstrumentMsg.SetText("All Instruments");
             int trknum = 0;
             string trkname = "";
             GeneralMidiInstrument gmi;
@@ -675,7 +658,7 @@ namespace MidiPlayer.Scenes
         {
             MidiInternalClock obj = (MidiInternalClock)sender;
             float seqPos = (float)sequencer1.Position;
-            PgBar.setValue(seqPos);
+            PgBar.SetValue(seqPos);
 
         }
         private void HandleChannelMessagePlayed(object sender, ChannelMessageEventArgs e)
@@ -692,7 +675,7 @@ namespace MidiPlayer.Scenes
             //    int inst = e.Message.Data1;
             //    GeneralMidiInstrument gmi = (GeneralMidiInstrument)inst;
             //    string instrument = gmi.ToString();
-            //    TrackInstrument[chnl].setText(instrument);
+            //    TrackInstrument[chnl].SetText(instrument);
 
             //}
 
@@ -737,7 +720,7 @@ namespace MidiPlayer.Scenes
         {
             Color clr = Color.White;
             Entity CurrentKey;                  //the key entity
-            Sprite sp;                          //the key sprite
+            SpriteRenderer sp;                          //the key sprite
             //
             // reset all keys to white
             //
@@ -745,12 +728,12 @@ namespace MidiPlayer.Scenes
             int MaxNote = 99;
             for (int i=MinNote; i <= MaxNote; i++)
             {          
-                CurrentKey = this.findEntity("pkey" + i.ToString());
+                CurrentKey = this.FindEntity("pkey" + i.ToString());
                 if (CurrentKey == null)
                     continue;
 
-                sp = CurrentKey.getComponent<Sprite>();
-                sp.color = Color.White;                                         //current key turned white
+                sp = CurrentKey.GetComponent<SpriteRenderer>();
+                sp.Color = Color.White;                                         //current key turned white
             }
             //
             // turn the octave keys to yellow starting at NoteID
@@ -759,12 +742,12 @@ namespace MidiPlayer.Scenes
             MaxNote = MinNote + 12;
             for (int i = MinNote; i <= MaxNote; i++)
             {
-                CurrentKey = this.findEntity("pkey" + i.ToString());
+                CurrentKey = this.FindEntity("pkey" + i.ToString());
                 if (CurrentKey == null)
                     continue;
 
-                sp = CurrentKey.getComponent<Sprite>();
-                sp.color = Color.Yellow;                                         //current key turned white
+                sp = CurrentKey.GetComponent<SpriteRenderer>();
+                sp.Color = Color.Yellow;                                         //current key turned white
             }
 
         }
@@ -776,23 +759,23 @@ namespace MidiPlayer.Scenes
             if (NoteID < MinNote || NoteID > MaxNote)
                 return;
 
-            NoteMsg.setText(NoteID.ToString());                     //display note value
+            NoteMsg.SetText(NoteID.ToString());                     //display note value
             Entity CurrentKey;                                      //get the key entity
-            CurrentKey = this.findEntity("pkey"  + NoteID.ToString());
+            CurrentKey = this.FindEntity("pkey"  + NoteID.ToString());
             if (CurrentKey == null)
                 return;
 
-            Sprite sp = CurrentKey.getComponent<Sprite>();
+            SpriteRenderer sp = CurrentKey.GetComponent<SpriteRenderer>();
             //sp.renderLayer = -8;                    //same render layer for black or white key
             if (NoteOn)
             {
                 outDevice.Send(new ChannelMessage(ChannelCommand.NoteOn, 0, NoteID, Velocity));
-                sp.color = Color.Blue;                                          //current key turned blue
+                sp.Color = Color.Blue;                                          //current key turned blue
             }
             else
             {
                 outDevice.Send(new ChannelMessage(ChannelCommand.NoteOff, 0, NoteID, Velocity));
-                sp.color = Color.Yellow;                                          //current key turned white
+                sp.Color = Color.Yellow;                                          //current key turned white
             }
         }
         private void HandleChased(object sender, ChasedEventArgs e)

@@ -30,24 +30,24 @@ namespace MidiPlayer.ECS.Systems
         {
 
         }
-        public override void process(Entity entity)
+        public override void Process(Entity entity)
         {
             //
             // ONLY piano key entities come here
             //
-            MainGameScene = entity.scene as MainScene;              //hand entity belongs to MainScene
+            MainGameScene = entity.Scene as MainScene;              //hand entity belongs to MainScene
 
-            Sprite sp = entity.getComponent<Sprite>();
-            PlayingComponent pc = entity.getComponent<PlayingComponent>();
+            SpriteRenderer sp = entity.GetComponent<SpriteRenderer>();
+            PlayingComponent pc = entity.GetComponent<PlayingComponent>();
             if (pc.ChannelMsg.Command == ChannelCommand.NoteOn)
             {
-                sp.color = Color.Blue;
+                sp.Color = Color.Blue;
             }
             else
             {
-                sp.color = Color.White;
+                sp.Color = Color.White;
             }
-            entity.removeComponent<PlayingComponent>();
+            entity.RemoveComponent<PlayingComponent>();
 
             if (PrevKey == null)
             {
@@ -55,8 +55,8 @@ namespace MidiPlayer.ECS.Systems
                 return;
             }
 
-            Sprite PrevSp = PrevKey.getComponent<Sprite>();
-            PrevSp.color = Color.White;
+            SpriteRenderer PrevSp = PrevKey.GetComponent<SpriteRenderer>();
+            PrevSp.Color = Color.White;
             PrevKey = entity;
 
         }

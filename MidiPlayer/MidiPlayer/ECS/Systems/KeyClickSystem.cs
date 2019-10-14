@@ -42,14 +42,14 @@ namespace MidiPlayer.ECS.Systems
         {
 
         }
-        public override void process(Entity entity)
+        public override void Process(Entity entity)
         {
             //
             // ONLY keyboard entity comes here
             //
-            MainGameScene = entity.scene as MainScene;              //hand entity belongs to MainScene
+            MainGameScene = entity.Scene as MainScene;              //hand entity belongs to MainScene
             
-            KeyboardState kbs = Input.currentKeyboardState;
+            KeyboardState kbs = Input.CurrentKeyboardState;
             //
             // Change current octave value of key of C (1 - 7)
             //     where 4 is the middle C octave
@@ -103,67 +103,67 @@ namespace MidiPlayer.ECS.Systems
             // left hand ON (A, S, D, F  and W, E)
             //
             int velocity = 127;
-            if (Input.isKeyPressed(Keys.A))
+            if (Input.IsKeyPressed(Keys.A))
                 MainGameScene.HandleChannelMessageKeys(0, CurrentC, velocity, true);
-            else if (Input.isKeyPressed(Keys.S))
+            else if (Input.IsKeyPressed(Keys.S))
                 MainGameScene.HandleChannelMessageKeys(0, CurrentC + 2, velocity, true);
-            else if (Input.isKeyPressed(Keys.D))
+            else if (Input.IsKeyPressed(Keys.D))
                 MainGameScene.HandleChannelMessageKeys(0, CurrentC + 4, velocity, true);
-            else if (Input.isKeyPressed(Keys.F))
+            else if (Input.IsKeyPressed(Keys.F))
                 MainGameScene.HandleChannelMessageKeys(0, CurrentC + 5, velocity, true);
-            else if (Input.isKeyPressed(Keys.W))
+            else if (Input.IsKeyPressed(Keys.W))
                 MainGameScene.HandleChannelMessageKeys(0, CurrentC + 1, velocity, true);
-            else if (Input.isKeyPressed(Keys.E))
+            else if (Input.IsKeyPressed(Keys.E))
                 MainGameScene.HandleChannelMessageKeys(0, CurrentC + 3, velocity, true);
             //
             // left hand OFF
             //
-            if (Input.isKeyReleased(Keys.A))
+            if (Input.IsKeyReleased(Keys.A))
                 MainGameScene.HandleChannelMessageKeys(0, CurrentC, velocity, false);
-            else if (Input.isKeyReleased(Keys.S))
+            else if (Input.IsKeyReleased(Keys.S))
                 MainGameScene.HandleChannelMessageKeys(0, CurrentC + 2, velocity, false);
-            else if (Input.isKeyReleased(Keys.D))
+            else if (Input.IsKeyReleased(Keys.D))
                 MainGameScene.HandleChannelMessageKeys(0, CurrentC + 4, velocity, false);
-            else if (Input.isKeyReleased(Keys.F))
+            else if (Input.IsKeyReleased(Keys.F))
                 MainGameScene.HandleChannelMessageKeys(0, CurrentC + 5, velocity, false);
-            else if (Input.isKeyReleased(Keys.W))
+            else if (Input.IsKeyReleased(Keys.W))
                 MainGameScene.HandleChannelMessageKeys(0, CurrentC + 1, velocity, false);
-            else if (Input.isKeyReleased(Keys.E))
+            else if (Input.IsKeyReleased(Keys.E))
                 MainGameScene.HandleChannelMessageKeys(0, CurrentC + 3, velocity, false);
 
             //
             // right hand ON (J, K, L, ; and I, O, P)
             //
-            if (Input.isKeyPressed(Keys.J))
+            if (Input.IsKeyPressed(Keys.J))
                 MainGameScene.HandleChannelMessageKeys(0, CurrentC + 7, velocity, true);
-            else if (Input.isKeyPressed(Keys.K))
+            else if (Input.IsKeyPressed(Keys.K))
                 MainGameScene.HandleChannelMessageKeys(0, CurrentC + 9, velocity, true);
-            else if (Input.isKeyPressed(Keys.L))
+            else if (Input.IsKeyPressed(Keys.L))
                 MainGameScene.HandleChannelMessageKeys(0, CurrentC + 11, velocity, true);
-            else if (Input.isKeyPressed(Keys.OemSemicolon))
+            else if (Input.IsKeyPressed(Keys.OemSemicolon))
                 MainGameScene.HandleChannelMessageKeys(0, CurrentC + 12, velocity, true);
-            else if (Input.isKeyPressed(Keys.I))
+            else if (Input.IsKeyPressed(Keys.I))
                 MainGameScene.HandleChannelMessageKeys(0, CurrentC + 6, velocity, true);
-            else if (Input.isKeyPressed(Keys.O))
+            else if (Input.IsKeyPressed(Keys.O))
                 MainGameScene.HandleChannelMessageKeys(0, CurrentC + 8, velocity, true);
-            else if (Input.isKeyPressed(Keys.P))
+            else if (Input.IsKeyPressed(Keys.P))
                 MainGameScene.HandleChannelMessageKeys(0, CurrentC + 10, velocity, true);
             //
             // right hand OFF
             //
-            if (Input.isKeyReleased(Keys.J))
+            if (Input.IsKeyReleased(Keys.J))
                 MainGameScene.HandleChannelMessageKeys(0, CurrentC + 7, velocity, false);
-            else if (Input.isKeyReleased(Keys.K))
+            else if (Input.IsKeyReleased(Keys.K))
                 MainGameScene.HandleChannelMessageKeys(0, CurrentC + 9, velocity, false);
-            else if (Input.isKeyReleased(Keys.L))
+            else if (Input.IsKeyReleased(Keys.L))
                 MainGameScene.HandleChannelMessageKeys(0, CurrentC + 11, velocity, false);
-            else if (Input.isKeyReleased(Keys.OemSemicolon))
+            else if (Input.IsKeyReleased(Keys.OemSemicolon))
                 MainGameScene.HandleChannelMessageKeys(0, CurrentC + 12, velocity, false);
-            else if (Input.isKeyReleased(Keys.I))
+            else if (Input.IsKeyReleased(Keys.I))
                 MainGameScene.HandleChannelMessageKeys(0, CurrentC + 6, velocity, false);
-            else if (Input.isKeyReleased(Keys.O))
+            else if (Input.IsKeyReleased(Keys.O))
                 MainGameScene.HandleChannelMessageKeys(0, CurrentC + 8, velocity, false);
-            else if (Input.isKeyReleased(Keys.P))
+            else if (Input.IsKeyReleased(Keys.P))
                 MainGameScene.HandleChannelMessageKeys(0, CurrentC + 10, velocity, false);
         }
     }

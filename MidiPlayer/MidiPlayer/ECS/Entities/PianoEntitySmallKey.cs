@@ -28,14 +28,14 @@ namespace MidiPlayer.ECS.Entities
         float xpos;
         public PianoEntitySmallKey(Scene scene, Vector2 PianoPos, int Channel)
         {
-            //font = new NezSpriteFont(scene.content.Load<SpriteFont>("Arial"));
+            //font = new NezSpriteFont(scene.Content.Load<SpriteFont>("Arial"));
 
-            //TextEntity = scene.createEntity("txt");
-            //TextEntity.transform.position = new Vector2(PianoPos.X - 5, PianoPos.Y - 50);
-            //TextEntity.transform.scale = new Vector2(1, 1);
-            //var txt = new Text(Graphics.instance.bitmapFont, "Ch " + Channel.ToString(), new Vector2(0, 0), Color.White);
-            //txt.setFont(font);
-            //TextEntity.addComponent(txt);
+            //TextEntity = scene.CreateEntity("");
+            //TextEntity.Transform.Position = new Vector2(PianoPos.X - 5, PianoPos.Y - 50);
+            //TextEntity.Transform.Scale = new Vector2(1, 1);
+            //var  = new Text(Graphics.instance.bitmapFont, "Ch " + Channel.ToString(), new Vector2(0, 0), Color.White);
+            //.SetFont(font);
+            //TextEntity.AddComponent();
 
             int note_offset = 0;
             int assigned_note = MinNote - 1;
@@ -83,18 +83,18 @@ namespace MidiPlayer.ECS.Entities
                 }
                 if (key_offset >= 0)
                 {
-                    var pkey = scene.createEntity("pkey");
-                    pkey.addComponent(new Sprite(scene.content.Load<Texture2D>("Piano/wkey")).setRenderLayer(-7));
+                    var pkey = scene.CreateEntity("pkey");
+                    pkey.AddComponent(new SpriteRenderer(scene.Content.Load<Texture2D>("Piano/wkey")).SetRenderLayer(-7));
                     NoteComponent comp = new NoteComponent();
                     comp.IsOn = false;
                     comp.NoteID = assigned_note;
 
-                    pkey.tag = assigned_note;
-                    pkey.name = "pkey" + Channel.ToString() + assigned_note.ToString();
-                    pkey.addComponent(comp);
-                    //pkey.addComponent(new BoxCollider());
+                    pkey.Tag = assigned_note;
+                    pkey.Name = "pkey" + Channel.ToString() + assigned_note.ToString();
+                    pkey.AddComponent(comp);
+                    //pkey.AddComponent(new BoxCollider());
                     xpos = PianoPos.X + (key_offset + m * 7) * whitekeywidth;
-                    pkey.setPosition(xpos, PianoPos.Y);
+                    pkey.SetPosition(xpos, PianoPos.Y);
                 }
             }
             //
@@ -133,8 +133,8 @@ namespace MidiPlayer.ECS.Entities
                 }
                 if (key_offset >= 0)
                 {
-                    var pkey = scene.createEntity("pkey");
-                    pkey.addComponent(new Sprite(scene.content.Load<Texture2D>("Piano/bkey")).setRenderLayer(-8));
+                    var pkey = scene.CreateEntity("pkey");
+                    pkey.AddComponent(new SpriteRenderer(scene.Content.Load<Texture2D>("Piano/bkey")).SetRenderLayer(-8));
                     NoteComponent comp = new NoteComponent();
                     comp.IsOn = false;
                     comp.NoteID = assigned_note;
@@ -142,11 +142,11 @@ namespace MidiPlayer.ECS.Entities
                     {
                         int junk = 0;
                     }
-                    pkey.tag = assigned_note;
-                    pkey.name = "pkey" + Channel.ToString() + assigned_note.ToString();
-                    pkey.addComponent(new BoxCollider());
+                    pkey.Tag = assigned_note;
+                    pkey.Name = "pkey" + Channel.ToString() + assigned_note.ToString();
+                    pkey.AddComponent(new BoxCollider());
                     xpos = (PianoPos.X + ((key_offset + m * 7) * whitekeywidth) + (whitekeywidth - blackkeywidth / 2)) - (blackkeywidth / 2);
-                    pkey.setPosition(xpos, PianoPos.Y - 10);
+                    pkey.SetPosition(xpos, PianoPos.Y - 10);
 
                 }
             }

@@ -26,22 +26,22 @@ namespace MidiPlayer.Scenes
             // if we didn't pass in a skin, we'll just use a default one
             // we don't actually use this anywhere in the base class but it can be useful to store it here
             if (skin == null)
-                _skin = Skin.createDefaultSkin();
+                _skin = Skin.CreateDefaultSkin();
         }
 
         /// <summary>
         /// Do our setup here.  We'll add our UICanvas and a table for starters.
         /// </summary>
-        public override void onAddedToEntity()
+        public override void OnAddedToEntity()
         {
-            base.onAddedToEntity();
+            base.OnAddedToEntity();
 
             // add the canvas to our component
-            ui = entity.addComponent(new UICanvas());
-            ui.renderLayer = _renderLayer;
+            ui = Entity.AddComponent(new UICanvas());
+            ui.RenderLayer = _renderLayer;
 
             // add a new table layout
-            table = ui.stage.addElement(new Table());
+            table = ui.Stage.AddElement(new Table());
 
             // after our canvas is prepped, create our UI elements
             Setup();
@@ -50,8 +50,8 @@ namespace MidiPlayer.Scenes
             PositionElements();
 
             // add events to listen for screen-size changing and scene changes
-            Core.emitter.addObserver(CoreEvents.GraphicsDeviceReset, PositionElements);
-            Core.emitter.addObserver(CoreEvents.SceneChanged, OnSceneChanged);
+            Core.Emitter.AddObserver(CoreEvents.GraphicsDeviceReset, PositionElements);
+            Core.Emitter.AddObserver(CoreEvents.SceneChanged, OnSceneChanged);
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace MidiPlayer.Scenes
         protected void SetBackgroundColor(Color color)
         {
             if (table != null)
-                table.setBackground(new PrimitiveDrawable(color));
+                table.SetBackground(new PrimitiveDrawable(color));
         }
 
         /// <summary>

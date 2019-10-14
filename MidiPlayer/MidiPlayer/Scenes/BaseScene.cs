@@ -9,7 +9,7 @@ namespace MidiPlayer.Scenes
         public BaseScene() { }
         public void SetupScene()
         {
-            addRenderer(new DefaultRenderer());
+            AddRenderer(new DefaultRenderer());
 
         }
     }

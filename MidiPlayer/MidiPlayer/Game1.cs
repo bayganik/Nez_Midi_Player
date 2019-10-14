@@ -23,11 +23,11 @@ namespace MidiPlayer
             //System.Diagnostics.Debug.Listeners.Add(new System.Diagnostics.TextWriterTraceListener(System.Console.Out));
 
             IsMouseVisible = true;
-            debugRenderEnabled = true;
+            DebugRenderEnabled = true;
             Window.AllowUserResizing = true;
-            debugRenderEnabled = false;
+            DebugRenderEnabled = false;
 
-            scene = new Scenes.MainScene();
+            Scene = new Scenes.MainScene();
         }
 
     }
