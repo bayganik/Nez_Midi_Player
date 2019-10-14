@@ -24,6 +24,8 @@ using Sanford.Multimedia.Midi;
 namespace MidiPlayer.Scenes
 {
     /*
+     * NEZ is brand new again!! so need to recompile 10/14/2019
+     * 
      * MIDI file has many tracks
      * MIDI file has 16 channels
      * Each track plays one instrument over a single channel
