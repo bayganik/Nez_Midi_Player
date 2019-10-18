@@ -1,6 +1,6 @@
 # Nez ECS Framework Sample
 
-This is a simple musical MIDI file player. NEZ is a 2D Framework specifically uses C# and Monogame.
+This is a simple musical MIDI file player and Piano (using keyboard). NEZ is a 2D Framework specifically uses C# and Monogame.
 
 https://github.com/prime31/Nez
 
